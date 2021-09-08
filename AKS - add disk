@@ -1,0 +1,11 @@
+
+
+az aks get-credentials --resource-group test-grp --name democluster
+
+
+az aks show --resource-group test-grp --name democluster --query nodeResourceGroup -o tsv
+
+
+az disk create --resource-group MC_test-grp_democluster_northeurope --name clusterdisk --size-gb 20 --query id --output tsv
+
+
